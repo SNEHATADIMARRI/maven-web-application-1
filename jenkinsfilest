@@ -1,0 +1,16 @@
+node {
+    
+    def mavenHome = tool name:"maven3.8.7"
+    stage('CheckoutCode'){
+     git branch: 'development', credentialsId: 'githubcredentials', url: 'https://github.com/SNEHATADIMARRI/maven-web-application-1.git'
+    }
+    stage('Build'){
+        sh "${mavenHome}/bin/mvn clean package"
+    }
+    stage('Execute Sonarqybe Report'){
+        sh "${mavenHome}/bin/mvn sonar:sonar"
+    }
+    stage('Upload artifact into Nexus'){
+        sh "${mavenHome}/bin/mvn deploy"
+    }   
+}
