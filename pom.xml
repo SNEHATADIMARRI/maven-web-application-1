@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Sneha Tadimarri Releases Nexus Repository</name>
-	      <url>http://13.126.74.234:8081/snehatadimarri/repository/walmart-release/</url>
+	      <url><http://43.204.24.94:8081/snehatadimarri/repository/walmart-release//url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Sneha Tadimarri Snapshot Nexus Repository </name>
-	      <url>http://13.126.74.234:8081/snehatadimarri/repository/walmart-snapshot/</url>
+	      <url>http://43.204.24.94:8081/snehatadimarri/repository/walmart-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
